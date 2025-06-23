@@ -1,159 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TheRaymundo27 • Official Fan Page</title>
-  <!-- Favicons -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Twitch Embed API -->
-  <script src="https://embed.twitch.tv/embed/v1.js"></script>
+  <title>TheRaymundo27 - Sitio Oficial</title>
   <style>
-    /* Reset & Base */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: linear-gradient(135deg, #9146FF 0%, #4B367C 100%);
-      font-family: 'Roboto', sans-serif;
-      color: #fff;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fafafa;
+      color: #222;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 1rem;
+      padding: 2rem 1rem;
     }
-    .card {
-      background: rgba(0, 0, 0, 0.75);
-      border-radius: 1rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-      max-width: 600px;
-      width: 100%;
+
+    header {
       text-align: center;
-      padding: 2rem;
     }
-    .logo {
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-    }
+
     .pfp {
-      width: 180px;
-      height: 180px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
-      margin: 0 auto 1rem;
-      border: 5px solid #9146FF;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+
     .quote {
-      font-family: 'Great Vibes', cursive;
-      font-size: 1.75rem;
-      color: #FFE066;
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      font-size: 1.5rem;
       margin-top: 1rem;
     }
-    .twitch-container {
-      margin-top: 2rem;
+
+    iframe {
+      margin: 2rem 0;
       width: 100%;
+      max-width: 500px;
       height: 350px;
-      position: relative;
-      overflow: hidden;
-    }
-    #twitch-embed {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
       border: none;
-      border-radius: 0.5rem;
+      border-radius: 0.75rem;
     }
-    .links-section {
-      margin-top: 2rem;
+
+    .section {
+      margin: 3rem 0;
+      width: 100%;
+      max-width: 700px;
+      padding: 1.5rem;
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
-    .links-section h2 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+
+    .section h2 {
+      color: #9146FF;
+      text-align: center;
+      margin-bottom: 1rem;
     }
+
     .links {
       display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 1rem;
     }
-    .links a {
+
+    .link {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      transition: transform 0.2s;
+      gap: 0.75rem;
+      font-size: 1.1rem;
     }
-    .links a:hover {
-      transform: scale(1.05);
-    }
-    .links a img {
+
+    .link img {
       width: 32px;
       height: auto;
     }
-    @media (min-width: 600px) {
-      .card { padding: 3rem; }
-      .logo { font-size: 2.5rem; }
-      .pfp { width: 220px; height: 220px; }
-      .quote { font-size: 2.25rem; }
-      .twitch-container { height: 500px; }
+
+    ol.commands, ol.rules {
+      list-style-position: inside;
+      font-size: 1rem;
+      line-height: 1.6;
+      padding-left: 0;
+    }
+
+    .rules li.relaxed {
+      margin-top: 1rem;
+      font-style: italic;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="logo">TheRaymundo27</div>
-    <!-- Replace 'pfp.jpg' with your profile picture filename -->
-    <img src="pfp.jpg" alt="Streamer Profile Pic" class="pfp">
-    <div class="quote">“El mejor streamer del año 2025”</div>
+  <header>
+    <img src="pfp.jpg" alt="pfp" class="pfp">
+    <div class="quote">„El mejor streamer del año 2025”</div>
+  </header>
 
-    <!-- Twitch Stream Embed -->
-    <div class="twitch-container">
-      <div id="twitch-embed"></div>
-    </div>
+  <iframe
+    src="https://player.twitch.tv/?channel=theraymundo27&parent=example.com"
+    allowfullscreen>
+  </iframe>
 
-    <!-- Enlaces Section -->
-    <div class="links-section">
-      <h2>Enlaces</h2>
-      <div class="links">
-        <a href="https://www.tiktok.com/@theraymundo27" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg" alt="TikTok">
-          <span>TikTok</span>
-        </a>
-        <a href="https://www.youtube.com/@TheRaymundo27" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Font_Awesome_5_brands_youtube.svg" alt="YouTube">
-          <span>YouTube</span>
-        </a>
-        <a href="https://discord.gg/x2HzS4JnaZ" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Discord_black_textlogo_%282021%29.svg" alt="Discord">
-          <span>Discord</span>
-        </a>
-        <a href="https://www.reddit.com/r/theraymundo27" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Snoo_black.svg" alt="Reddit">
-          <span>Reddit</span>
-        </a>
+  <section class="section">
+    <h2>Enlaces</h2>
+    <div class="links">
+      <div class="link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg" alt="TikTok">
+        <a href="https://www.tiktok.com/@theraymundo27" target="_blank">TikTok</a>
+      </div>
+      <div class="link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Font_Awesome_5_brands_youtube.svg" alt="YouTube">
+        <a href="https://www.youtube.com/@TheRaymundo27" target="_blank">YouTube</a>
+      </div>
+      <div class="link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Discord_black_textlogo_%282021%29.svg" alt="Discord">
+        <a href="https://discord.gg/x2HzS4JnaZ" target="_blank">Discord</a>
+      </div>
+      <div class="link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Snoo_black.svg" alt="Reddit">
+        <a href="https://www.reddit.com/r/theraymundo27" target="_blank">Reddit</a>
       </div>
     </div>
+  </section>
 
-  </div>
+  <section class="section">
+    <h2>REGLAS DEL CHAT</h2>
+    <ol class="rules">
+      <li><strong>NO</strong> insultar al streamer, moderadores u otros viewers.</li>
+      <li><strong>NO</strong> hacer promoción de otros canales o plataformas.</li>
+      <li><strong>NO</strong> poner links que no estén relacionados con el tema del stream y con ánimo de lucro en el chat.</li>
+      <li><strong>NO</strong> provocar a otras personas del chat que cree un mal ambiente en el stream.</li>
+      <li class="relaxed">Por lo demás, como en vuestra casa, disfrutad y pasad el rato como mejor os parezca. 🛋️</li>
+    </ol>
+  </section>
 
-  <script type="text/javascript">
-    new Twitch.Embed("twitch-embed", {
-      width: "100%",
-      height: "100%",
-      channel: "TheRaymundo27",
-      autoplay: false
-    });
-  </script>
+  <section class="section">
+    <h2>COMANDOS DEL CHAT</h2>
+    <ol class="commands">
+      <li>!youtube → Canal de YouTube</li>
+      <li>!twitter → Cuenta de Twitter</li>
+      <li>!tiktok → Cuenta de TikTok</li>
+      <li>!discord → Comunidad de Discord</li>
+      <li>!social → Redes Sociales</li>
+      <li>!uptime → Tiempo del directo</li>
+      <li>!commands → Lista de comandos</li>
+      <li>!lurk → Modo Tesla (Espectador fantasma)</li>
+      <li>!tip → Donaciones</li>
+      <li>!pc → Características del PC Gaming</li>
+      <li>!hug → Abracito</li>
+      <li>!quote → Lanza una frase mítica del canal</li>
+      <li>!8ball → Pregúntale a la bola mágica</li>
+      <li>!slots → Apuesta tus puntos de lealtad en la tragaperras</li>
+      <li>!duel → Reta a otro espectador a un duelo por puntos de lealtad</li>
+      <li>!accept → Acepta el duelo</li>
+      <li>!deny → Rechaza el duelo</li>
+      <li>!cancel → Cancela el duelo</li>
+      <li>!nt → Los Iloros en HD</li>
+    </ol>
+  </section>
 </body>
 </html>
