@@ -56,7 +56,7 @@
     .twitch-container {
       margin-top: 2rem;
       width: 100%;
-      height: 300px;
+      height: 350px;
       position: relative;
       overflow: hidden;
     }
@@ -85,20 +85,28 @@
       gap: 1.5rem;
       flex-wrap: wrap;
     }
-    .links a img {
-      width: 40px;
-      height: auto;
+    .links a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
       transition: transform 0.2s;
     }
-    .links a img:hover {
-      transform: scale(1.1);
+    .links a:hover {
+      transform: scale(1.05);
+    }
+    .links a img {
+      width: 32px;
+      height: auto;
     }
     @media (min-width: 600px) {
       .card { padding: 3rem; }
       .logo { font-size: 2.5rem; }
       .pfp { width: 220px; height: 220px; }
       .quote { font-size: 2.25rem; }
-      .twitch-container { height: 400px; }
+      .twitch-container { height: 500px; }
     }
   </style>
 </head>
@@ -120,15 +128,19 @@
       <div class="links">
         <a href="https://www.tiktok.com/@theraymundo27" target="_blank" rel="noopener">
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg" alt="TikTok">
+          <span>TikTok</span>
         </a>
         <a href="https://www.youtube.com/@TheRaymundo27" target="_blank" rel="noopener">
           <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Font_Awesome_5_brands_youtube.svg" alt="YouTube">
+          <span>YouTube</span>
         </a>
         <a href="https://discord.gg/x2HzS4JnaZ" target="_blank" rel="noopener">
           <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Discord_black_textlogo_%282021%29.svg" alt="Discord">
+          <span>Discord</span>
         </a>
         <a href="https://www.reddit.com/r/theraymundo27" target="_blank" rel="noopener">
           <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Snoo_black.svg" alt="Reddit">
+          <span>Reddit</span>
         </a>
       </div>
     </div>
