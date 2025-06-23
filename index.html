@@ -92,6 +92,12 @@
       letter-spacing: 1px;
     }
 
+    /* Add spacing before Rules and Commands headers */
+    .links-section h2 + ol,
+    .links-section ol + h2 {
+      margin-top: 1.5rem;
+    }
+
     .links {
       display: flex;
       justify-content: center;
@@ -118,7 +124,6 @@
       height: auto;
     }
 
-    /* Rules & Commands Lists */
     .links-section ol {
       text-align: left;
       margin: 1rem 0;
@@ -140,9 +145,7 @@
 <body>
   <div class="card">
     <div class="logo">TheRaymundo27</div>
-    
     <img src="pfp.jpg" alt="Streamer Profile Pic" class="pfp" />
-    
     <div class="quote">“El mejor streamer del año 2025”</div>
 
     <!-- Twitch Stream Embed -->
@@ -171,6 +174,7 @@
           <span>Reddit</span>
         </a>
       </div>
+
       <!-- Chat Rules Section -->
       <h2>REGLAS DEL CHAT</h2>
       <ol>
@@ -180,6 +184,7 @@
         <li><strong>NO</strong> provocar a otras personas del chat que cree un mal ambiente en el stream.</li>
         <li>Por lo demás, como en vuestra casa, disfrutad y pasad el rato como mejor os parezca.</li>
       </ol>
+
       <!-- Chat Commands Section -->
       <h2>COMANDOS DEL CHAT</h2>
       <ol>
