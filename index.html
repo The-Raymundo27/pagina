@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TheRaymundo27 • Official Fan Page</title>
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Twitch Embed API -->
+  <script src="https://embed.twitch.tv/embed/v1.js"></script>
+  <style>
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: linear-gradient(135deg, #9146FF 0%, #4B367C 100%);
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+    .card {
+      background: rgba(0, 0, 0, 0.75);
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      padding: 2rem;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+    .pfp {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      border: 5px solid #9146FF;
+    }
+    .quote {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.75rem;
+      color: #FFE066;
+      margin-top: 1rem;
+    }
+    .twitch-container {
+      margin-top: 2rem;
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+    #twitch-embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 0.5rem;
+    }
+    @media (min-width: 600px) {
+      .card { padding: 3rem; }
+      .logo { font-size: 2.5rem; }
+      .pfp { width: 220px; height: 220px; }
+      .quote { font-size: 2.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">TheRaymundo27</div>
+    <!-- Replace 'pfp.jpg' with your profile picture filename -->
+    <img src="pfp.jpg" alt="Streamer Profile Pic" class="pfp">
+    <div class="quote">“El mejor streamer del año 2025”</div>
+
+    <!-- Twitch Stream Embed -->
+    <div class="twitch-container">
+      <div id="twitch-embed"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    new Twitch.Embed("twitch-embed", {
+      width: "100%",
+      height: "100%",
+      channel: "TheRaymundo27",
+      // layout: "video-with-chat", // Uncomment to include chat
+      autoplay: false
+    });
+  </script>
+</body>
+</html>
+
+<!--
+  How to get your Twitch widget:
+  1. Copy the <script src="https://embed.twitch.tv/embed/v1.js"></script> tag into your <head>.
+  2. In the <body>, insert a div with id="twitch-embed" inside a responsive container.
+  3. Initialize the embed in a <script> block, setting 'channel' to your Twitch username.
+  4. Optional: add 'layout: "video-with-chat"' to show chat alongside the stream.
+-->
