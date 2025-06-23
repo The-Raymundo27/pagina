@@ -55,9 +55,10 @@
     }
     .twitch-container {
       margin-top: 2rem;
+      width: 100%;
+      height: 300px;
       position: relative;
       overflow: hidden;
-      padding-top: 56.25%; /* 16:9 Aspect Ratio */
     }
     #twitch-embed {
       position: absolute;
@@ -68,11 +69,36 @@
       border: none;
       border-radius: 0.5rem;
     }
+    .links-section {
+      margin-top: 2rem;
+    }
+    .links-section h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .links a img {
+      width: 40px;
+      height: auto;
+      transition: transform 0.2s;
+    }
+    .links a img:hover {
+      transform: scale(1.1);
+    }
     @media (min-width: 600px) {
       .card { padding: 3rem; }
       .logo { font-size: 2.5rem; }
       .pfp { width: 220px; height: 220px; }
       .quote { font-size: 2.25rem; }
+      .twitch-container { height: 400px; }
     }
   </style>
 </head>
@@ -87,6 +113,26 @@
     <div class="twitch-container">
       <div id="twitch-embed"></div>
     </div>
+
+    <!-- Enlaces Section -->
+    <div class="links-section">
+      <h2>Enlaces</h2>
+      <div class="links">
+        <a href="https://www.tiktok.com/@theraymundo27" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg" alt="TikTok">
+        </a>
+        <a href="https://www.youtube.com/@TheRaymundo27" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Font_Awesome_5_brands_youtube.svg" alt="YouTube">
+        </a>
+        <a href="https://discord.gg/x2HzS4JnaZ" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Discord_black_textlogo_%282021%29.svg" alt="Discord">
+        </a>
+        <a href="https://www.reddit.com/r/theraymundo27" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Snoo_black.svg" alt="Reddit">
+        </a>
+      </div>
+    </div>
+
   </div>
 
   <script type="text/javascript">
@@ -94,17 +140,8 @@
       width: "100%",
       height: "100%",
       channel: "TheRaymundo27",
-      // layout: "video-with-chat", // Uncomment to include chat
       autoplay: false
     });
   </script>
 </body>
 </html>
-
-<!--
-  How to get your Twitch widget:
-  1. Copy the <script src="https://embed.twitch.tv/embed/v1.js"></script> tag into your <head>.
-  2. In the <body>, insert a div with id="twitch-embed" inside a responsive container.
-  3. Initialize the embed in a <script> block, setting 'channel' to your Twitch username.
-  4. Optional: add 'layout: "video-with-chat"' to show chat alongside the stream.
--->
